@@ -1,0 +1,148 @@
+$near-black: rgb(33, 0, 8);
+$red: #b82525;
+
+.reveal {
+  section {
+    img {
+      border: none;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+
+      &.shadow {
+        -webkit-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.50);
+      }
+    }
+
+    h1, h2, h3, h4, h5, & {
+      color: $near-black;
+      font-weight: 300 !important;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "papaya_sunriseregular", serif;
+      line-height: 2em;
+    }
+
+
+    h5 {
+      font-weight: 400 !important;
+      font-size: 50px;
+      font-family: "Open Sans", serif;
+    }
+
+    h1, h2 {
+      font-weight: 600 !important;
+    }
+
+    font-size: 45px;
+    font-family: "Open Sans", serif;
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+      li:before {
+        content: "-";
+        color: $red;
+        position: relative;
+        left: -25px;
+      }
+
+      li {
+        padding-bottom: 15px;
+      }
+    }
+
+    .accent {
+      color: $red;
+    }
+
+    #info {
+      padding-top: 100px;
+      h3 {
+        padding-bottom: 50px;
+      }
+      .social {
+        padding-right: 120px;
+        display: flex;
+        &>div {
+          flex: 50%;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .twitter {
+        img {
+          width: 60px;
+          padding-right: 10px;
+          opacity: 0.9;
+        }
+        justify-content: flex-end;
+        padding-right: 50px;
+      }
+      .wrike {
+        justify-content: flex-start;
+        a {
+          padding-right: 10px;
+        }
+        img {
+          width: 60px;
+          padding-right: 10px;
+          opacity: 0.9;
+        }
+
+      }
+
+      img.small-logo {
+        width: 50px;
+        margin: 0;
+        vertical-align: middle;
+        border-radius: 0;
+        padding-right: 5px;
+      }
+
+      a {
+        color: $near-black;
+      }
+    }
+
+    code {
+      padding: 20px;
+      max-height: 1500px;
+      font-size: 30px;
+      line-height: 35px;
+      overflow: hidden;
+      font-family: Menlo, monospace;
+
+      span.grayed {
+        &, .hljs-title, .hljs-keyword, .hljs-string {
+          color: gray !important;
+        }
+      }
+    }
+
+    &.fullscreen {
+      code {
+        font-size: 35px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+#credits {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+  &, a, a:visited, a:hover {
+    color: rgba(0, 0, 0, 0.56);
+    text-decoration: none;
+
+  }
+}
