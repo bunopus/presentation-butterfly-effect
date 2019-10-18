@@ -8,10 +8,10 @@
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/white.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
 	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/xcode.css">
+	<link rel="stylesheet" href="lib/css/pojoaque.css">
 
 	<link rel="stylesheet" href="css/custom.css">
 
@@ -38,38 +38,150 @@
 			<section data-background="#FFFFFF">
 				<img class="fragment" data-duration="2" data-animate="fadeIn" src="img/ministry.png">
 			</section>
-			<section data-fullscreen>
-                        <pre><code class="javascript">
+			<section data-background="img/disaster.jpg"></section>
+			<section>
+				<pre><code data-trim data-noescape class="cpp">
 // C
-struct Foo
+struct XPositionSensorData
 {
-    char ch;
-    int value;
+  int xCoord;
+  short voltageLevel;
+  char sensorNum;
 };
-[   ] [   ] [   ] [   ] [   ] [   ] [   ] [   ] [    ] [   ] [    ] [    ]
-[ x ] { потерянные байты } [             y           ] [ z ] { потерянные байты }
-                        </code></pre>
+						</code></pre>
 			</section>
-		</section>
+			<section>
+				<pre><code data-trim data-noescape class="c">
+// C++
+class SensorData
+{
+  char sensorNum;
+};
 
-			<section data-credits>
-				<div id="info">
-					<h3>Thank you</h3>
-					<div class="social">
-						<div class="twitter">
-							<img src="img/social/twitter.png"><a href="https://twitter.com/bunopus">bunopus</a>
-						</div>
-						<div class="wrike">
-								<a href="https://www.wrike.com/">wriketechclub</a><img src="img/social/twitter.png"><img src="img/social/youtube.png">
-						</div>
+class XPositionSensorData :
+                public SensorData
+{
+  int xCoord;
+  short voltageLevel;
+};
+						</code></pre>
+			</section>
+
+			<section>
+				<pre><code data-trim data-noescape class="c">
+// C
+struct XPositionSensorData
+{
+  int xCoord; <span class="fragment" data-fragment-index="0">/* 4 bytes */</span>
+  short voltageLevel; <span class="fragment" data-fragment-index="0">/* 2 bytes */</span>
+  char sensorNum;<span class="fragment" data-fragment-index="0">/* 1 byte */</span>
+};
+sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">8</span>
+						</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape class="c" style="text-align: center">
+[  1  ][  2  ][  3  ][  4  ]
+[            int           ]
+
+[  5  ][  6  ][  7  ][  8  ]
+[    short   ][ int ]<span style="background-color: #842828">[  X  ]</span>
+						</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape class="c">
+// C++
+class SensorData
+{
+  char sensorNum; /* 1 byte */
+};
+
+class XPositionSensorData :
+                public SensorData
+{
+  int xCoord; /* 4 bytes */
+  short voltageLevel; /* 2 bytes */
+};
+						</code></pre>
+			</section>
+
+			<section>
+				<pre><code data-trim data-noescape class="c" style="text-align: center">
+[  1  ][   2   ][  3   ][  4  ]
+[char ]<span style="background-color: #842828">[   X   ][  X   ][  X  ]</span>
+<span class="fragment">
+[  5  ][  6  ][   7   ][   8  ]
+[            int              ]
+</span><span class="fragment">
+[  9  ][  10  ][  11  ][  12  ]
+[    short    ]<span style="background-color: #842828">[  X   ][  X   ]</span>
+</span>
+
+						</code></pre>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape class="c">
+// C++
+class SensorData
+{
+  char sensorNum;
+};
+
+class XPositionSensorData :
+                public SensorData
+{
+  int xCoord;
+  short voltageLevel;
+};
+sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12</span>
+						</code></pre>
+			</section>
+			<section data-transition="none" data-background-transition="none" data-background="img/bg-neon.png">
+				<div class="neon">TECH IS HARD</div>
+			</section>
+			<section data-transition="none" data-background-transition="none"></section>
+		</section>
+		<section>title</section>
+		<section>wrike + Dart</section>
+		<section>about me</section>
+		<section>photo of old product</section>
+		<section>tech limitations</section>
+		<section>maslow pyramide</section>
+		<section>story about dart</section>
+		<section>maslow - no direct hype here</section>
+		<section>about dart</section>
+		<section>another things - scalability - maslow</section>
+		<section>Dart - scalable</section>
+		<section>another things - support - maslow</section>
+		<section>Dart - support</section>
+		<section>another things - hiring - maslow</section>
+		<section>Dart C#</section>
+
+		<section>maslow complete</section>
+		<section>i don't want to sell you dart</section>
+		<section>choosing something - WWW - Where Why and What</section>
+		<section>restaurant paradox</section>
+
+		<section data-credits data-background="#FFFFFF">
+			<div id="info">
+				<h3>Thank you</h3>
+				<div class="social">
+					<div class="twitter">
+						<img src="img/social/twitter.png"><a href="https://twitter.com/bunopus">bunopus</a>
+					</div>
+					<div class="wrike">
+						<a href="https://www.wrike.com/">wriketechclub</a><img src="img/social/twitter.png"><img
+									src="img/social/youtube.png">
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 
 	</div>
 </div>
 
 <div id="credits">
+<!--	https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT-->
 	<span>♥</span>
 </div>
 
