@@ -14,7 +14,7 @@ $red: #b82525;
       color: $main;
     }
 
-    ul {
+    ul:not(.ct-legend) {
       list-style: none;
       margin: 0;
 
@@ -119,6 +119,84 @@ $red: #b82525;
       }
       height: 700px;
       position: relative;
+    }
+
+
+    .chart {
+       $first: #A9635B;
+       $second: #24B086;
+       $third: #D5A976;
+
+      .ct-label {
+        color: #D7C8BE;
+      }
+
+      .ct-grid {
+        stroke: #82766A;
+      }
+
+      .ct-series-a .ct-line {
+        stroke: $first;
+      }
+
+      .ct-series-b .ct-line {
+        stroke: $second;
+      }
+
+      .ct-series-c .ct-line {
+        stroke: $third;
+      }
+
+      .ct-legend {
+        position: relative;
+        z-index: 10;
+        list-style-type: none;
+
+        li {
+          position: relative;
+          padding-left: 25px;
+          margin-bottom: 3px;
+          display: inline-block;
+          margin-right: 23px;
+        }
+
+        li:before {
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          left: 0;
+          content: '';
+          border: 3px solid transparent;
+          border-radius: 2px;
+        }
+
+        li.inactive:before {
+          background: transparent;
+        }
+
+        &.ct-legend-inside {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      &.line-chart {
+        .ct-legend {
+          & .ct-series-0:before {
+            background-color: $first;
+            border-color: $first;
+          }
+          & .ct-series-1:before {
+            background-color: $second;
+            border-color: $second;
+          }
+          & .ct-series-2:before {
+            background-color: $third;
+            border-color: $third;
+          }
+        }
+      }
     }
   }
 }

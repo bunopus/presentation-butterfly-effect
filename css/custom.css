@@ -7,15 +7,15 @@
 .reveal section h1, .reveal section h2, .reveal section h3, .reveal section h4, .reveal section h5, .reveal section {
   color: #e0d8b3; }
 
-.reveal section ul {
+.reveal section ul:not(.ct-legend) {
   list-style: none;
   margin: 0; }
-  .reveal section ul li:before {
+  .reveal section ul:not(.ct-legend) li:before {
     content: "-";
     color: #b82525;
     position: relative;
     left: -25px; }
-  .reveal section ul li {
+  .reveal section ul:not(.ct-legend) li {
     padding-bottom: 15px; }
 
 .reveal section #info {
@@ -103,6 +103,58 @@
   position: relative; }
   .reveal section .news-paper img {
     box-shadow: 3px -4px 19px 0px rgba(0, 0, 0, 0.75); }
+
+.reveal section .chart .ct-label {
+  color: #D7C8BE; }
+
+.reveal section .chart .ct-grid {
+  stroke: #82766A; }
+
+.reveal section .chart .ct-series-a .ct-line {
+  stroke: #A9635B; }
+
+.reveal section .chart .ct-series-b .ct-line {
+  stroke: #24B086; }
+
+.reveal section .chart .ct-series-c .ct-line {
+  stroke: #D5A976; }
+
+.reveal section .chart .ct-legend {
+  position: relative;
+  z-index: 10;
+  list-style-type: none; }
+  .reveal section .chart .ct-legend li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 3px;
+    display: inline-block;
+    margin-right: 23px; }
+  .reveal section .chart .ct-legend li:before {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    content: '';
+    border: 3px solid transparent;
+    border-radius: 2px; }
+  .reveal section .chart .ct-legend li.inactive:before {
+    background: transparent; }
+  .reveal section .chart .ct-legend.ct-legend-inside {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.reveal section .chart.line-chart .ct-legend .ct-series-0:before {
+  background-color: #A9635B;
+  border-color: #A9635B; }
+
+.reveal section .chart.line-chart .ct-legend .ct-series-1:before {
+  background-color: #24B086;
+  border-color: #24B086; }
+
+.reveal section .chart.line-chart .ct-legend .ct-series-2:before {
+  background-color: #D5A976;
+  border-color: #D5A976; }
 
 #credits {
   display: none;
