@@ -136,8 +136,8 @@ class XPositionSensorData :
 sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12</span>
 						</code></pre>
 			</section>
-			<section></section>
-			<section data-transition="none" data-background-transition="none" data-background="img/bg-neon.png">
+			<section data-background="#191919"></section>
+			<section data-transition="none" data-background-transition="none" data-background="#191919">
 				<div class="neon">TECH IS HARD</div>
 			</section>
 			<section data-transition="none" data-background-transition="none"></section>
@@ -147,7 +147,7 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 			<section>
 				<h3>Evgeny<span style="font-size: 1em; padding-left: 20px">🐈</span></h3>
 				<ul>
-					<li>Backend => Frontend => Management 🤔
+					<li>Backend => Frontend => Management 🤔</li>
 					<li>Director of Development 🇨🇿</li>
 					<li>Web, Dart and Flutter GDE <img src="img/experts-logo.png" style="vertical-align: middle; height: 1.3em;">
 					</li>
@@ -162,9 +162,11 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 			<img src="img/wrike+dart.png" style="height: 150px;">
 		</section>
 		<section data-background="img/maslow/title.png"><h2 style="float: right">maslow pyramid</h2></section>
+		<section data-background="img/maslow/maslow-original.png"></section>
+		<section data-background="img/maslow/maslow-original-dev.png" data-background-transition="slide"></section>
 		<section data-background="img/maslow/cut.png" data-background-transition="slide"></section>
 		<section>
-			<section data-background="img/maslow/1-tech.png"><h2 style="float: right; padding-right: 50px">I. Technical</h2>
+			<section data-background="img/maslow/1-tech.png"><h2 style="float: right;">I. Technological</h2>
 			</section>
 			<section>
 				<div class="center">
@@ -182,34 +184,187 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 				<div class="fragment" data-chart-popularity-2></div>
 				<div class="fragment" data-chart-popularity-3></div>
 			</section>
+			<section data-background="img/table/1-dart-hype.png"></section>
+			<section data-background="img/table/2-js-hype.png"></section>
+			<section data-background="img/table/3-ts-hype.png"></section>
+			<section data-background="img/table/4-dart-type-system.png"></section>
+			<section data-background="#191919">
+				//TODO ADD JS logo
+				<pre><code data-trim data-noescape class="javascript">
+function isDeleted(userJson) {
+  const user = JSON.parse(userJson);
+  return user["ID"] === 0; <span class="fragment">// "deleted_1234567"</span>
+}
+						</code></pre>
+			</section>
+			<section>
+				<h3>Dart typesystem</h3>
+				<ul>
+					<li>Strong 💪</li>
+					<li>Sound 🔊</li>
+					<li>Persist at runtime 🏃‍♂️</li>
+				</ul>
+			</section>
+			<section data-background="#191919">
+				//TODO ADD Dart logo, zoom
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+class User {  }
+
+class Admin extends User {  }
+
+class DeletedUser extends User {  }
+
+void main() {
+  List&lt;Admin&gt; foo = &lt;dynamic&gt;[DeletedUser()]; // Error
+  List&lt;dynamic&gt; bar = &lt;dynamic&gt;[Admin(), DeletedUser()]; // OK
+}
+						</code></pre>
+			</section>
+			<section data-background="#191919">
+				Runtime checks <br>
+				//TODO ADD Dart logo, zoom
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+class User {  }
+
+class Admin extends User {  }
+
+class DeletedUser extends User {  }
+
+void main() {
+  List&lt;User&gt; users = [Admin()];
+  List&lt;DeletedUser&gt; deleted = users;
+}
+						</code></pre>
+			</section>
+			<section><h3>nominal vs structural</h3></section>
+			<section><img src="img/plato.jpg"></section>
+			<section data-background="#191919">
+				//TODO ADD TS logo, zoom
+				<pre><code data-trim data-noescape class="typescript" style="font-size: 1.1em">
+interface Men {
+  hadFeathers: boolean;
+  legs: number;
+}
+
+class Fowl {
+  hadFeathers: boolean;
+  legs: number;
+}
+
+let p: Men;
+// OK, because of structural typing
+p = new Fowl();
+						</code></pre>
+			</section>
+			<section>
+				<h3>Dart coolness</h3>
+				<ul>
+					<li>Tree shaking
+					<li>Operator overloading
+					<li>Real block scope, no hoisting, no IIFEs
+					<li>A native VM
+					<li>Sane equality semantics
+					<li>No weird implicit conversion craziness
+					<li>Lexically bound this everywhere
+					<li>Mixins</li>
+					<li>Annotations</li>
+					<li>An import system</li>
+					<li>User-defined subscript operators</li>
+					<li>Generics, with reification</li>
+				</ul>
+			</section>
+			<section data-background="img/table/5-dart-ecosystem.png"></section>
+			<section data-background-video="media/BMO.mp4"></section>
+			<section data-background="#191919">
+				collections<br>
+				//TODO ADD Dart logo, zoom
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+// See #6 for users list
+var over21s = users.where((user) => user[“age”] > 21);
+print(over21s.length); // => 1
+var nameJ = users.firstWhere((user) => user[“name”].startsWith(‘J’), orElse: () => null);
+print(nameJ); // => {name: John, age: 18}
+var under18s = users.singleWhere((user) => user[“age”] < 18, orElse: () => null);
+print(under18s); // => null
+						</code></pre>
+			</section>
+			<section data-background="#191919">
+				streams<br>
+				//TODO ADD Dart logo, zoom
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+Future&lt;int&gt; sumStream(Stream&lt;int&gt; stream) async {
+  var sum = 0;
+  await for (var value in stream) {
+    sum += value;
+  }
+  return sum;
+}
+						</code></pre>
+			</section>
+			<section data-background="img/table/6-dart-complexity.png"></section>
+			<section data-background-video="media/ts-types.mp4"></section>
 		</section>
 		<section>
 			<section data-background="img/maslow/2-scalability.png"><h2 style="float: right; padding-right: 50px">II.
 				Scalability</h2></section>
+			<section><h2>Tree shaking</h2> //TODO ADD gif</section>
+			<section data-background="#191919">
+				tree shaking<br>
+				//TODO ADD Dart logo, zoom
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+class Test {
+  void printSomething(String msg) => print(msg);
+}
+
+void main() {
+  const test = new Test();
+  test.printSomething("Hello World");
+}
+						</code></pre>
+			</section>
+			<section data-background="#191919">
+				<pre><code data-trim data-noescape class="js"">
+//...
+console.log("Hello World");
+//...
+					</code></pre>
+			</section>
+			<section><h2>Deferred loading</h2> //TODO ADD gif</section>
+			<section data-background="#191919">
+				Deferred loading<br>
+				//TODO ADD Dart logo, zoom
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+import 'package:greetings/hello.dart' deferred as hello;
+
+Future greet() async {
+  await hello.loadLibrary();
+  hello.printGreeting();
+}
+						</code></pre>
+			</section>
 		</section>
 		<section>
 			<section data-background="img/maslow/3-support.png"><h2 style="float: right; padding-right: 50px">III.
 				Support</h2></section>
+			<section>
+				<ul>
+					<li>Dart lang itself</li>
+					<li>Angular</li>
+					<li>Third-party Libraries</li>
+				</ul>
+			</section>
 		</section>
 		<section>
 			<section data-background="img/maslow/4-other.png"><h2 style="float: right; padding-right: 50px">IV. Other</h2>
 			</section>
+			<section><h3>Hiring</h3></section>
 		</section>
-		<section>tech limitations</section>
-		<section>maslow pyramide</section>
-		<section>story about dart</section>
-		<section>maslow - no direct hype here</section>
-		<section>about dart</section>
-		<section>another things - scalability - maslow</section>
-		<section>Dart - scalable</section>
-		<section>another things - support - maslow</section>
-		<section>Dart - support</section>
-		<section>another things - hiring - maslow</section>
-		<section>Dart C#</section>
-
-		<section>maslow complete</section>
 		<section>i don't want to sell you dart</section>
-		<section>choosing something - WWW - Where Why and What</section>
+		<section>
+			<div><h1>Where</h1></div>
+			<div><h1>Why</h1></div>
+			<div><h1>What</h1></div>
+		</section>
 		<section>restaurant paradox</section>
 
 		<section data-credits data-background="#FFFFFF">
@@ -231,6 +386,8 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 </div>
 
 <div id="credits">
+	<a href="https://qz.com/work/1588491/maslow-didnt-make-the-pyramid-that-changed-management-history/">maslow
+		pyramide</a> /
 	american typewriter font
 	<!--	https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT-->
 	<span>♥</span>
