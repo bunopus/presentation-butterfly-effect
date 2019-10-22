@@ -164,6 +164,15 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 		<section>
 			<img src="img/wrike+dart.png" style="height: 150px;">
 		</section>
+		<section>
+			<span style="color: red; font-size: 0.5em;">dim old</span>
+			<h3>Story</h3>
+			<ul>
+				<li>1 million LOC JS => <span class="fragment">1.5 million LOC Dart</span></li>
+				<li>ExtJS, Soy, Legacy => <span class="fragment">AngularDart, Less</span></li>
+				<li>9 frontend developers => <span class="fragment">75 frontend developers</span></li>
+			</ul>
+		</section>
 		<section data-background="img/maslow/title.png"><h2 style="float: right">maslow pyramid</h2></section>
 		<section data-background="img/maslow/maslow-original.png"></section>
 		<section data-background="img/maslow/maslow-original-dev.png" data-background-transition="slide"></section>
@@ -191,9 +200,8 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 			<section data-background="img/table/2-js-hype.png"></section>
 			<section data-background="img/table/3-ts-hype.png"></section>
 			<section data-background="img/table/4-dart-type-system.png"></section>
-			<section data-background="#191919">
-				//TODO ADD JS logo
-				<pre><code data-trim data-noescape class="javascript">
+			<section data-background="#191919" class="about-js">
+				<pre><code data-trim data-noescape class="javascript" style="font-size: 1.4em">
 function isDeleted(userJson) {
   const user = JSON.parse(userJson);
   return user["ID"] === 0; <span class="fragment">// "deleted_1234567"</span>
@@ -208,8 +216,7 @@ function isDeleted(userJson) {
 					<li>Persist at runtime 🏃‍♂️</li>
 				</ul>
 			</section>
-			<section data-background="#191919">
-				//TODO ADD Dart logo, zoom
+			<section data-background="#191919" class="about-dart">
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
 class User {  }
 
@@ -223,9 +230,8 @@ void main() {
 }
 						</code></pre>
 			</section>
-			<section data-background="#191919">
-				Runtime checks <br>
-				//TODO ADD Dart logo, zoom
+			<section data-background="#191919" class="about-dart">
+				Runtime checks
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
 class User {  }
 
@@ -241,8 +247,7 @@ void main() {
 			</section>
 			<section><h3>nominal vs structural</h3></section>
 			<section><img src="img/plato.jpg"></section>
-			<section data-background="#191919">
-				//TODO ADD TS logo, zoom
+			<section data-background="#191919" class="about-ts">
 				<pre><code data-trim data-noescape class="typescript" style="font-size: 1.1em">
 interface Men {
   hadFeathers: boolean;
@@ -278,9 +283,8 @@ p = new Fowl();
 			</section>
 			<section data-background="img/table/5-dart-ecosystem.png"></section>
 			<section data-background-video="media/BMO.mp4"></section>
-			<section data-background="#191919">
-				collections<br>
-				//TODO ADD Dart logo, zoom
+			<section data-background="#191919" class="about-dart">
+				Collections
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
 // See #6 for users list
 var over21s = users.where((user) => user[“age”] > 21);
@@ -291,9 +295,8 @@ var under18s = users.singleWhere((user) => user[“age”] < 18, orElse: () => n
 print(under18s); // => null
 						</code></pre>
 			</section>
-			<section data-background="#191919">
-				streams<br>
-				//TODO ADD Dart logo, zoom
+			<section data-background="#191919" class="about-dart">
+				Streams
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
 Future&lt;int&gt; sumStream(Stream&lt;int&gt; stream) async {
   var sum = 0;
@@ -305,15 +308,14 @@ Future&lt;int&gt; sumStream(Stream&lt;int&gt; stream) async {
 						</code></pre>
 			</section>
 			<section data-background="img/table/6-dart-complexity.png"></section>
-			<section data-background-video="media/ts-types.mp4"></section>
+			<section data-background-video="media/ts-types.mp4" class="about-ts"></section>
 		</section>
 		<section>
 			<section data-background="img/maslow/2-scalability.png"><h2 style="float: right; padding-right: 50px">II.
 				Scalability</h2></section>
 			<section><h2>Tree shaking</h2> //TODO ADD gif</section>
-			<section data-background="#191919">
-				tree shaking<br>
-				//TODO ADD Dart logo, zoom
+			<section data-background="#191919" class="about-dart">
+				Tree shaking
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
 class Test {
   void printSomething(String msg) => print(msg);
@@ -325,17 +327,16 @@ void main() {
 }
 						</code></pre>
 			</section>
-			<section data-background="#191919">
-				<pre><code data-trim data-noescape class="js"">
+			<section data-background="#191919" class="about-js">
+				<pre><code data-trim data-noescape class="js">
 //...
 console.log("Hello World");
 //...
 					</code></pre>
 			</section>
 			<section><h2>Deferred loading</h2> //TODO ADD gif</section>
-			<section data-background="#191919">
-				Deferred loading<br>
-				//TODO ADD Dart logo, zoom
+			<section data-background="#191919" class="about-dart">
+				Deferred loading
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
 import 'package:greetings/hello.dart' deferred as hello;
 
@@ -414,7 +415,8 @@ Future greet() async {
             {src: 'plugin/highlight/highlight.js', async: true, callback: waitForHLJS},
             {src: 'bower_components/jquery/dist/jquery.min.js'},
             {src: 'js/animations.js'},
-            {src: 'js/skills_chart.js'},
+            {src: 'plugin/fullscreen/fullscreen.js'},
+            {src: 'plugin/corner-logos/corner-logos.js' },
             {src: 'plugin/script-runner/script-runner.js'},
             {src: 'plugin/alt-arrows/alt-arrows.js', async: true},
             {src: 'plugin/blur-background/blur-background.js'},
@@ -424,6 +426,7 @@ Future greet() async {
             {src: 'bower_components/moment/min/moment.min.js'},
             {src: 'plugin/chartist/chartist.js'},
             {src: 'plugin/chartist/chartist-plugin-legend/chartist-plugin-legend.js'},
+
 
 
         ],
@@ -1503,7 +1506,12 @@ Future greet() async {
                     });
                 }
             },
-        }
+        },
+        cornerLogos: {
+            'about-dart': 'img/dart_logo.png',
+            'about-js': 'img/js_logo.png',
+            'about-ts': 'img/ts_logo.png'
+        },
 
     });
 
