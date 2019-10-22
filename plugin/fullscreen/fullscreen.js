@@ -31,7 +31,8 @@ var RevealFullscreen= window.RevealFullscreen || (function(){
 	} );
 
 	window.addEventListener( 'resize', function( event ) {
-		if ( Reveal.getCurrentSlide().hasAttribute("data-fullscreen") ) {
+		const currentSlide = Reveal.getCurrentSlide();
+		if ( currentSlide && currentSlide.hasAttribute("data-fullscreen") ) {
 			Reveal.configure( { width: window.innerWidth, height: window.innerHeight, margin: 0 } );
 		}
 	} );

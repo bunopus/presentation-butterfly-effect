@@ -41,14 +41,16 @@
 			<section>
 				<h3>Evgeny<span style="font-size: 1em; padding-left: 20px">🐈</span></h3>
 				<ul>
-					<li><span class="fragment">Backend =></span> <span class="fragment">Frontend =></span> <span class="fragment">Management 🤔</span></li>
+					<li class="fragment">Backend => <span class="fragment">Frontend =></span> <span class="fragment">Management 🤔</span>
+					</li>
 					<li class="fragment">Director of Development 🇨🇿</li>
-					<li class="fragment">Web, Dart and Flutter GDE <img src="img/experts-logo.png" style="vertical-align: middle; height: 1.3em;">
+					<li class="fragment">Web, Dart and Flutter GDE <img src="img/experts-logo.png"
+																															style="vertical-align: middle; height: 1.3em;">
 					</li>
 				</ul>
 			</section>
 			<section data-background="img/disaster.jpg"></section>
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="cpp">
 // C
 struct XPositionSensorData
@@ -146,7 +148,8 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 						</code></pre>
 			</section>
 			<section data-background="img/atomic.jpg" data-transition="fade-in" data-transition-speed="slow">
-				<h1 data-animate="fadeIn" data-duration="5" data-delay="1" style="font-size: 6em; color: black">MEMORY OVERFLOW</h1>
+				<h1 data-animate="fadeIn" data-duration="5" data-delay="1" style="font-size: 6em; color: black">MEMORY
+					OVERFLOW</h1>
 			</section>
 			<section data-background="#191919"></section>
 			<section data-transition="none" data-background-transition="none" data-background="#191919">
@@ -159,19 +162,17 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 		</section>
 		<section>
 			<section data-background="img/wrike-old.png"></section>
+			<section data-background="img/wrike-old-blur.png" data-background-color="white">
+				<ul style="color: #000; font-size: 1.5em">
+					<li>big, working product</li>
+					<li class="fragment">bunch of legacy JS, ExtJS, Soy</li>
+					<li class="fragment">9 FE developers</li>
+				</ul>
+			</section>
 			<section data-background="img/wrike-new.png"></section>
 		</section>
 		<section>
 			<img src="img/wrike+dart.png" style="height: 150px;">
-		</section>
-		<section>
-			<span style="color: red; font-size: 0.5em;">dim old</span>
-			<h3>Story</h3>
-			<ul>
-				<li>1 million LOC JS => <span class="fragment">1.5 million LOC Dart</span></li>
-				<li>ExtJS, Soy, Legacy => <span class="fragment">AngularDart, Less</span></li>
-				<li>9 frontend developers => <span class="fragment">75 frontend developers</span></li>
-			</ul>
 		</section>
 		<section data-background="img/maslow/title.png"><h2 style="float: right">maslow pyramid</h2></section>
 		<section data-background="img/maslow/maslow-original.png"></section>
@@ -416,7 +417,7 @@ Future greet() async {
             {src: 'bower_components/jquery/dist/jquery.min.js'},
             {src: 'js/animations.js'},
             {src: 'plugin/fullscreen/fullscreen.js'},
-            {src: 'plugin/corner-logos/corner-logos.js' },
+            {src: 'plugin/corner-logos/corner-logos.js'},
             {src: 'plugin/script-runner/script-runner.js'},
             {src: 'plugin/alt-arrows/alt-arrows.js', async: true},
             {src: 'plugin/blur-background/blur-background.js'},
@@ -426,7 +427,6 @@ Future greet() async {
             {src: 'bower_components/moment/min/moment.min.js'},
             {src: 'plugin/chartist/chartist.js'},
             {src: 'plugin/chartist/chartist-plugin-legend/chartist-plugin-legend.js'},
-
 
 
         ],
