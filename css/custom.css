@@ -74,6 +74,8 @@
     font-family: Menlo, monospace;
     max-height: 1900px;
     background-color: #191919; }
+    .reveal section .fullscreen code.packing {
+      text-align: center; }
   .reveal section .neon {
     color: #f3fffd;
     font-family: neoneonregular, monospace;

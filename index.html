@@ -69,8 +69,7 @@ class SensorData
   char sensorNum;
 };
 
-class XPositionSensorData :
-                public SensorData
+class XPositionSensorData : public SensorData
 {
   int xCoord;
   short voltageLevel;
@@ -91,12 +90,12 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">8</
 						</code></pre>
 			</section>
 			<section data-background="#191919" data-fullscreen>
-				<pre><code data-trim data-noescape class="c" style="text-align: center">
+				<pre><code data-trim data-noescape class="c packing"">
 [  1  ][  2  ][  3  ][  4  ]
 [            int           ]
 
 [  5  ][  6  ][  7  ][  8  ]
-[    short   ][ int ]<span style="background-color: #842828">[  X  ]</span>
+[    short   ][char ]<span style="background-color: #842828">[  X  ]</span>
 						</code></pre>
 			</section>
 			<section data-background="#191919" data-fullscreen>
@@ -107,8 +106,7 @@ class SensorData
   char sensorNum; /* 1 byte */
 };
 
-class XPositionSensorData :
-                public SensorData
+class XPositionSensorData : public SensorData
 {
   int xCoord; /* 4 bytes */
   short voltageLevel; /* 2 bytes */
@@ -117,7 +115,7 @@ class XPositionSensorData :
 			</section>
 
 			<section data-background="#191919" data-fullscreen>
-				<pre><code data-trim data-noescape class="c" style="text-align: center">
+				<pre><code data-trim data-noescape class="c packing">
 [  1  ][   2   ][  3   ][  4  ]
 [char ]<span style="background-color: #842828">[   X   ][  X   ][  X  ]</span>
 <span class="fragment">
@@ -138,8 +136,7 @@ class SensorData
   char sensorNum;
 };
 
-class XPositionSensorData :
-                public SensorData
+class XPositionSensorData : public SensorData
 {
   int xCoord;
   short voltageLevel;
@@ -218,7 +215,7 @@ function isDeleted(userJson) {
 				</ul>
 			</section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
-				<pre><code data-trim data-noescape class="Dart">
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.9em; line-height: 1.4em;">
 class User {  }
 
 class Admin extends User {  }
@@ -232,7 +229,7 @@ void main() {
 						</code></pre>
 			</section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
-				Runtime checks
+				<h3>Runtime checks</h3>
 				<pre><code data-trim data-noescape class="Dart">
 class User {  }
 
@@ -285,21 +282,21 @@ p = new Fowl();
 			<section data-background="img/table/5-dart-ecosystem.png"></section>
 			<section data-background-video="media/BMO.mp4"></section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
-				Collections
-				<pre><code data-trim data-noescape class="Dart">
-// See #6 for users list
-var over21s = users.where((user) => user[“age”] > 21);
-print(over21s.length); // => 1
-var nameJ = users.firstWhere((user) => user[“name”].startsWith(‘J’), orElse: () => null);
-print(nameJ); // => {name: John, age: 18}
-var under18s = users.singleWhere((user) => user[“age”] < 18, orElse: () => null);
-print(under18s); // => null
+				<h3>Collections</h3>
+				<pre><code data-trim data-noescape class="dart">
+const users = [...]
+users.where((user) => user[“age”] > 21);
+
+users.firstWhere((user)
+       => user[“name”].startsWith(‘J’),
+          orElse: () => null);
+// {name: John, age: 18}
 						</code></pre>
 			</section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
-				Streams
+				<h3>Streams</h3>
 				<pre><code data-trim data-noescape class="Dart">
-Future&lt;int&gt; sumStream(Stream&lt;int&gt; stream) async {
+sumStream(Stream&lt;int&gt; stream) async {
   var sum = 0;
   await for (var value in stream) {
     sum += value;
@@ -337,8 +334,8 @@ console.log("Hello World");
 			</section>
 			<section><h2>Deferred loading</h2> //TODO ADD gif</section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
-				Deferred loading
-				<pre><code data-trim data-noescape class="Dart">
+				<h3>Deferred loading</h3>
+				<pre><code data-trim data-noescape class="Dart" style="font-size: 2.2em; line-height: 1.2em;">
 import 'package:greetings/hello.dart' deferred as hello;
 
 Future greet() async {

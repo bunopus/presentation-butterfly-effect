@@ -3,6 +3,7 @@ $red: #b82525;
 
 .reveal {
   background-color: #332F2B;
+
   section {
     img {
       border: none;
@@ -33,32 +34,40 @@ $red: #b82525;
 
     #info {
       padding-top: 100px;
+
       h3 {
         padding-bottom: 50px;
       }
+
       .social {
         padding-right: 120px;
         display: flex;
-        &>div {
+
+        & > div {
           flex: 50%;
           display: flex;
           align-items: center;
         }
       }
+
       .twitter {
         img {
           width: 60px;
           padding-right: 10px;
           opacity: 0.9;
         }
+
         justify-content: flex-end;
         padding-right: 50px;
       }
+
       .wrike {
         justify-content: flex-start;
+
         a {
           padding-right: 10px;
         }
+
         img {
           width: 60px;
           padding-right: 10px;
@@ -95,7 +104,13 @@ $red: #b82525;
         font-family: Menlo, monospace;
         max-height: 1900px;
         background-color: #191919;
+
+        &.packing {
+          text-align: center;
+        }
       }
+
+
     }
 
 
@@ -124,15 +139,16 @@ $red: #b82525;
         -moz-box-shadow: 3px -4px 19px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 3px -4px 19px 0px rgba(0, 0, 0, 0.75);
       }
+
       height: 700px;
       position: relative;
     }
 
 
     .chart {
-       $first: #A9635B;
-       $second: #24B086;
-       $third: #D5A976;
+      $first: #A9635B;
+      $second: #24B086;
+      $third: #D5A976;
 
       .ct-label {
         color: #D7C8BE;
@@ -194,10 +210,12 @@ $red: #b82525;
             background-color: $first;
             border-color: $first;
           }
+
           & .ct-series-1:before {
             background-color: $second;
             border-color: $second;
           }
+
           & .ct-series-2:before {
             background-color: $third;
             border-color: $third;
@@ -206,6 +224,7 @@ $red: #b82525;
       }
     }
   }
+
   div.slide-background.present[data-background-hash="img/atomic.jpgnullimg/atomic.jpgnullnullnullnullnullnullnull"] {
     opacity: 0;
     animation: fadein 5s forwards;
@@ -236,6 +255,10 @@ $red: #b82525;
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
