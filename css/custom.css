@@ -63,15 +63,17 @@
       padding-right: 5px; }
     .reveal section #info a {
       color: #e0d8b3; }
-  .reveal section code {
-    font-size: 1.5em;
-    line-height: 1.2em;
+  .reveal section .fullscreen pre {
+    box-shadow: none;
+    margin: 0;
+    padding: 100px; }
+  .reveal section .fullscreen code {
+    font-size: calc(2vw + 2vh);
+    line-height: calc(2.2vw + 2.2vh);
     overflow: hidden;
     font-family: Menlo, monospace;
-    max-height: 1000px;
+    max-height: 1900px;
     background-color: #191919; }
-  .reveal section pre {
-    box-shadow: none; }
   .reveal section .neon {
     color: #f3fffd;
     font-family: neoneonregular, monospace;

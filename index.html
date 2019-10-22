@@ -61,7 +61,7 @@ struct XPositionSensorData
 };
 						</code></pre>
 			</section>
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c">
 // C++
 class SensorData
@@ -78,7 +78,7 @@ class XPositionSensorData :
 						</code></pre>
 			</section>
 
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c">
 // C
 struct XPositionSensorData
@@ -90,7 +90,7 @@ struct XPositionSensorData
 sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">8</span>
 						</code></pre>
 			</section>
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c" style="text-align: center">
 [  1  ][  2  ][  3  ][  4  ]
 [            int           ]
@@ -99,7 +99,7 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">8</
 [    short   ][ int ]<span style="background-color: #842828">[  X  ]</span>
 						</code></pre>
 			</section>
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c">
 // C++
 class SensorData
@@ -116,7 +116,7 @@ class XPositionSensorData :
 						</code></pre>
 			</section>
 
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c" style="text-align: center">
 [  1  ][   2   ][  3   ][  4  ]
 [char ]<span style="background-color: #842828">[   X   ][  X   ][  X  ]</span>
@@ -130,7 +130,7 @@ class XPositionSensorData :
 
 						</code></pre>
 			</section>
-			<section data-background="#191919">
+			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c">
 // C++
 class SensorData
@@ -201,8 +201,8 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 			<section data-background="img/table/2-js-hype.png"></section>
 			<section data-background="img/table/3-ts-hype.png"></section>
 			<section data-background="img/table/4-dart-type-system.png"></section>
-			<section data-background="#191919" class="about-js">
-				<pre><code data-trim data-noescape class="javascript" style="font-size: 1.4em">
+			<section data-background="#191919" data-fullscreen class="about-js">
+				<pre><code data-trim data-noescape class="javascript">
 function isDeleted(userJson) {
   const user = JSON.parse(userJson);
   return user["ID"] === 0; <span class="fragment">// "deleted_1234567"</span>
@@ -217,8 +217,8 @@ function isDeleted(userJson) {
 					<li>Persist at runtime 🏃‍♂️</li>
 				</ul>
 			</section>
-			<section data-background="#191919" class="about-dart">
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+			<section data-background="#191919" data-fullscreen class="about-dart">
+				<pre><code data-trim data-noescape class="Dart">
 class User {  }
 
 class Admin extends User {  }
@@ -231,9 +231,9 @@ void main() {
 }
 						</code></pre>
 			</section>
-			<section data-background="#191919" class="about-dart">
+			<section data-background="#191919" data-fullscreen class="about-dart">
 				Runtime checks
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+				<pre><code data-trim data-noescape class="Dart">
 class User {  }
 
 class Admin extends User {  }
@@ -248,8 +248,8 @@ void main() {
 			</section>
 			<section><h3>nominal vs structural</h3></section>
 			<section><img src="img/plato.jpg"></section>
-			<section data-background="#191919" class="about-ts">
-				<pre><code data-trim data-noescape class="typescript" style="font-size: 1.1em">
+			<section data-background="#191919" data-fullscreen class="about-ts">
+				<pre><code data-trim data-noescape class="typescript">
 interface Men {
   hadFeathers: boolean;
   legs: number;
@@ -284,9 +284,9 @@ p = new Fowl();
 			</section>
 			<section data-background="img/table/5-dart-ecosystem.png"></section>
 			<section data-background-video="media/BMO.mp4"></section>
-			<section data-background="#191919" class="about-dart">
+			<section data-background="#191919" data-fullscreen class="about-dart">
 				Collections
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+				<pre><code data-trim data-noescape class="Dart">
 // See #6 for users list
 var over21s = users.where((user) => user[“age”] > 21);
 print(over21s.length); // => 1
@@ -296,9 +296,9 @@ var under18s = users.singleWhere((user) => user[“age”] < 18, orElse: () => n
 print(under18s); // => null
 						</code></pre>
 			</section>
-			<section data-background="#191919" class="about-dart">
+			<section data-background="#191919" data-fullscreen class="about-dart">
 				Streams
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+				<pre><code data-trim data-noescape class="Dart">
 Future&lt;int&gt; sumStream(Stream&lt;int&gt; stream) async {
   var sum = 0;
   await for (var value in stream) {
@@ -315,9 +315,9 @@ Future&lt;int&gt; sumStream(Stream&lt;int&gt; stream) async {
 			<section data-background="img/maslow/2-scalability.png"><h2 style="float: right; padding-right: 50px">II.
 				Scalability</h2></section>
 			<section><h2>Tree shaking</h2> //TODO ADD gif</section>
-			<section data-background="#191919" class="about-dart">
+			<section data-background="#191919" data-fullscreen class="about-dart">
 				Tree shaking
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+				<pre><code data-trim data-noescape class="Dart">
 class Test {
   void printSomething(String msg) => print(msg);
 }
@@ -328,7 +328,7 @@ void main() {
 }
 						</code></pre>
 			</section>
-			<section data-background="#191919" class="about-js">
+			<section data-background="#191919" data-fullscreen class="about-js">
 				<pre><code data-trim data-noescape class="js">
 //...
 console.log("Hello World");
@@ -336,9 +336,9 @@ console.log("Hello World");
 					</code></pre>
 			</section>
 			<section><h2>Deferred loading</h2> //TODO ADD gif</section>
-			<section data-background="#191919" class="about-dart">
+			<section data-background="#191919" data-fullscreen class="about-dart">
 				Deferred loading
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.1em">
+				<pre><code data-trim data-noescape class="Dart">
 import 'package:greetings/hello.dart' deferred as hello;
 
 Future greet() async {
@@ -408,7 +408,7 @@ Future greet() async {
         progress: false,
         transition: 'fade',
         transitionSpeed: 'fast',
-        backgroundTransition: 'fade',
+        backgroundTransition: 'slide',
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},
@@ -427,8 +427,6 @@ Future greet() async {
             {src: 'bower_components/moment/min/moment.min.js'},
             {src: 'plugin/chartist/chartist.js'},
             {src: 'plugin/chartist/chartist-plugin-legend/chartist-plugin-legend.js'},
-
-
         ],
         keyboard: {
             39: 'next',
