@@ -200,6 +200,11 @@ $red: #b82525;
       }
     }
   }
+
+  div.slide-background.present[data-background-hash="img/atomic.jpgnullnullnullnullnullnullnullnullnull"] {
+    opacity: 0;
+    animation: fadein 5s forwards;
+  }
 }
 
 #credits {
@@ -223,4 +228,9 @@ $red: #b82525;
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
   }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
