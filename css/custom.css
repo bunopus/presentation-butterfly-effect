@@ -76,6 +76,8 @@
     background-color: #191919; }
     .reveal section .fullscreen code.packing {
       text-align: center; }
+    .reveal section .fullscreen code .fragment:not(.visible) {
+      opacity: 0.1; }
   .reveal section .neon {
     color: #f3fffd;
     font-family: neoneonregular, monospace;

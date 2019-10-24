@@ -108,6 +108,10 @@ $red: #b82525;
         &.packing {
           text-align: center;
         }
+
+        .fragment:not(.visible){
+          opacity: 0.1;
+        }
       }
 
 
