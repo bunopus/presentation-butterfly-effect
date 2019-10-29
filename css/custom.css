@@ -76,7 +76,7 @@
     background-color: #191919; }
     .reveal section .fullscreen code.packing {
       text-align: center; }
-    .reveal section .fullscreen code .fragment:not(.visible) {
+    .reveal section .fullscreen code.line-by-line > .fragment:not(.visible) {
       opacity: 0.1; }
   .reveal section .neon {
     color: #f3fffd;
@@ -146,6 +146,40 @@
   .reveal section .chart.line-chart .ct-legend .ct-series-2:before {
     background-color: #D5A976;
     border-color: #D5A976; }
+  .reveal section .comparsion-table {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 100px 0 100px 0; }
+    .reveal section .comparsion-table .header {
+      height: 100px;
+      margin-bottom: 100px; }
+    .reveal section .comparsion-table .score {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      font-size: 1.4em; }
+    .reveal section .comparsion-table .winner {
+      color: #dd8105;
+      font-size: 1.4em; }
+    .reveal section .comparsion-table .loser {
+      color: rgba(0, 0, 0, 0.6); }
+    .reveal section .comparsion-table .opaque {
+      opacity: 0.3; }
+    .reveal section .comparsion-table div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+  .reveal section .www .capital {
+    color: #de776b; }
+  .reveal section .restaurants img {
+    height: 500px; }
   .reveal div.slide-background.present[data-background-hash="img/atomic.jpgnullimg/atomic.jpgnullnullnullnullnullnullnull"] {
     opacity: 0;
     -webkit-animation: fadein 5s forwards;

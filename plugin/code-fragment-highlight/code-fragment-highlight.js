@@ -26,8 +26,8 @@
     // TODO looks bad, refactor
     const style = "<style type=\"text/css\">" +
         `.reveal .slides section .fragment.${highlightClass} {visibility: visible; opacity: 1}` +
-        `.reveal .slides section code.${grayedClass} > span:not(.current-fragment) {opacity: 0.1}`+
-        `.reveal .slides section code.${grayedClass} > span.current-visible.visible:not(.current-fragment) {opacity: 0.7;}`;
+        `.reveal .slides section code.${grayedClass} > span:not(.current-fragment) {opacity: 0.1}` +
+        `.reveal .slides section code.line-by-line.${grayedClass} > span.visible {opacity: 1}`;
         "</style>";
     if ($headlinklast.length){
         $headlinklast.after(style);

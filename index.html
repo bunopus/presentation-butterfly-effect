@@ -41,7 +41,8 @@
 			<section>
 				<h3>Evgeny<span style="font-size: 1em; padding-left: 20px">🐈</span></h3>
 				<ul>
-					<li class="fragment">Backend => <span class="fragment">Frontend =></span> <span class="fragment">Management 🤔</span>
+					<li class="fragment">Backend => <span class="fragment">Frontend =></span> <span
+									class="fragment">Management 🤔</span>
 					</li>
 					<li class="fragment">Web, Dart and Flutter GDE <img src="img/experts-logo.png"
 																															style="vertical-align: middle; height: 1.3em;">
@@ -96,7 +97,7 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">8</
 
 [  5  ][  6  ][  7  ][  8  ]
 [    short   ][char ]<span style="background-color: #842828">[  X  ]</span>
-						</code></pre>
+					</code></pre>
 			</section>
 			<section data-background="#191919" data-fullscreen>
 				<pre><code data-trim data-noescape class="c">
@@ -128,7 +129,7 @@ class XPositionSensorData : public SensorData
 
 						</code></pre>
 			</section>
-			<section data-background="#191919" data-fullscreen>
+			<section data-background="#191919" data-fullscreen data-transition="none" data-background-transition="none">
 				<pre><code data-trim data-noescape class="c">
 // C++
 class SensorData
@@ -163,11 +164,13 @@ sizeof(XPositionSensorData) == <span class="fragment" style="font-size: 2em">12<
 			<section data-background="img/wrike-old-blur.png" data-background-color="white">
 				<ul style="color: #000; font-size: 1.5em">
 					<li>big, working product</li>
-					<li class="fragment">bunch of legacy JS, ExtJS, Soy</li>
+					<li class="fragment">JS, ExtJS, Soy</li>
+					<li class="fragment">LOT of JS</li>
 					<li class="fragment">9 FE developers</li>
 				</ul>
 			</section>
 			<section data-background="img/wrike-new.png"></section>
+			<section><img src="img/js_logo.png"></section>
 			<section data-background="#191919" data-fullscreen class="about-js">
 				<pre><code data-trim data-noescape class="javascript">
 function isDeleted(userJson) {
@@ -185,7 +188,7 @@ function isDeleted(userJson) {
 		<section data-background="img/maslow/maslow-original-dev.png" data-background-transition="slide"></section>
 		<section data-background="img/maslow/cut.png" data-background-transition="slide"></section>
 		<section>
-			<section data-background="img/maslow/1-tech.png"><h2 style="float: right;">I. Technological</h2>
+			<section data-background="img/maslow/1-tech.png"><h2 style="float: right;">I. Technology</h2>
 			</section>
 			<section>
 				<div class="center">
@@ -206,52 +209,9 @@ function isDeleted(userJson) {
 			<section data-background="img/table/1-dart-hype.png"></section>
 			<section data-background="img/table/2-js-hype.png"></section>
 			<section data-background="img/table/3-ts-hype.png"></section>
-			<section data-background="img/table/4-dart-type-system.png"></section>
-			<section>
-				<h3>Dart typesystem</h3>
-				<ul>
-					<li>Strong 💪</li>
-					<li>Sound 🧱</li>
-					<li>Persist at runtime 🏃‍♂️</li>
-				</ul>
-			</section>
-			<section data-background="#191919" data-fullscreen class="about-dart">
-				<pre><code data-trim data-noescape class="Dart" style="font-size: 1.9em; line-height: 1.4em;">
-<span class="fragment code-highlight current-visible" data-fragment-index="0">class Animal {  }</span>
-
-<span class="fragment code-highlight current-visible" data-fragment-index="1">class Cat extends Animal {  }</span>
-
-<span class="fragment code-highlight current-visible" data-fragment-index="2">class Dog extends Animal {  }</span>
-<span class="fragment code-highlight current-visible" data-fragment-index="3">
-void main() {</span>
-  <span class="fragment code-highlight current-visible" data-fragment-index="4">List&lt;Cat&gt; cats = &lt;dynamic&gt;[Dog()]; // Error</span>
-  <span class="fragment code-highlight current-visible" data-fragment-index="5">List&lt;Animal&gt; animals = [Cat()];</span>
-  <span class="fragment code-highlight current-visible" data-fragment-index="6">List&lt;Dog&gt; dogs = animals; // Runtime error</span>
-<span class="fragment code-highlight current-visible" data-fragment-index="3">}</span>
-						</code></pre>
-			</section>
-			<section><h3>nominal vs structural</h3></section>
-			<section><img src="img/plato.jpg"></section>
-			<section data-background="#191919" data-fullscreen class="about-ts">
-				<pre><code data-trim data-noescape class="typescript">
-interface Men {
-  hadFeathers: boolean;
-  legs: number;
-}
-
-class Fowl {
-  hadFeathers: boolean;
-  legs: number;
-}
-
-let p: Men;
-// OK, because of structural typing
-p = new Fowl();
-						</code></pre>
-			</section>
 			<section>
 				<h3>Dart coolness</h3>
-				<ul>
+				<ul style="font-size: 0.5em">
 					<li>Tree shaking
 					<li>Operator overloading
 					<li>Real block scope, no hoisting, no IIFEs
@@ -266,30 +226,78 @@ p = new Fowl();
 					<li>Generics, with reification</li>
 				</ul>
 			</section>
+			<section data-background="img/table/4-dart-type-system.png"></section>
+			<section>
+				<h3>Dart typesystem</h3>
+				<ul>
+					<li>Strong 💪</li>
+					<li>Sound 🧱</li>
+					<li>Persist at runtime 🏃‍♂️</li>
+				</ul>
+			</section>
+			<section data-background="#191919" data-fullscreen class="about-dart" data-background-transition="none"
+							 data-transition="none">
+				<pre><code data-trim data-noescape class="Dart line-by-line" style="font-size: 1.9em; line-height: 1.4em;">
+<span class="fragment code-highlight current-visible" data-fragment-index="0">class Animal {  }</span>
+
+<span class="fragment code-highlight current-visible" data-fragment-index="1">class Cat extends Animal {  }</span>
+
+<span class="fragment code-highlight current-visible" data-fragment-index="2">class Dog extends Animal {  }</span>
+<span class="fragment code-highlight current-visible" data-fragment-index="3">
+void main() {</span>
+  <span class="fragment code-highlight current-visible" data-fragment-index="4">List&lt;Cat&gt; cats = &lt;dynamic&gt;[Dog()]; // Error</span>
+  <span class="fragment code-highlight current-visible"
+				data-fragment-index="5">List&lt;Animal&gt; animals = [Cat()];</span>
+  <span class="fragment code-highlight current-visible" data-fragment-index="6">List&lt;Dog&gt; dogs = animals; // Runtime error</span>
+<span class="fragment code-highlight current-visible" data-fragment-index="3">}</span>
+						</code></pre>
+			</section>
+			<section><h3>nominal vs structural</h3></section>
+			<section data-background="img/plato.png"></section>
+			<section data-background="img/plato-diogenes.png"></section>
+			<section data-background="#191919" data-fullscreen class="about-ts">
+				<pre><code data-trim data-noescape class="typescript line-by-line"><span class="fragment code-highlight">
+class Men {
+  hadFeathers: boolean;
+  legs: number;
+}
+</span><span class="fragment code-highlight">
+class Chicken {
+  hadFeathers: boolean;
+  legs: number;
+}
+</span><span class="fragment code-highlight">
+let p: Men;</span><span class="fragment code-highlight">
+// OK, because of structural typing
+p = new Chicken();</span>
+						</code></pre>
+			</section>
 			<section data-background="img/table/5-dart-ecosystem.png"></section>
 			<section data-background-video="media/BMO.mp4"></section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
 				<h3>Collections</h3>
 				<pre><code data-trim data-noescape class="dart">
-const users = [...]
-users.where((user) => user[“age”] > 21);
+<span>const users = [...];</span>
+<span class="fragment code-highlight">users.where((user) => user[“age”] > 21);</span>
 
+<span>
 users.firstWhere((user)
        => user[“name”].startsWith(‘J’),
           orElse: () => null);
 // {name: John, age: 18}
+</span>
 						</code></pre>
 			</section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
 				<h3>Streams</h3>
 				<pre><code data-trim data-noescape class="Dart">
-sumStream(Stream&lt;int&gt; stream) async {
-  var sum = 0;
-  await for (var value in stream) {
-    sum += value;
+<span class="fragment code-highlight" data-fragment-index="0">sumStream(Stream&lt;int&gt; stream) async {</span>
+  <span>var sum = 0;</span>
+  <span class="fragment code-highlight" data-fragment-index="0">await for (var value in stream) {</span>
+    <span>sum += value;
   }
   return sum;
-}
+}</span>
 						</code></pre>
 			</section>
 			<section data-background="img/table/6-dart-complexity.png"></section>
@@ -298,7 +306,8 @@ sumStream(Stream&lt;int&gt; stream) async {
 		<section>
 			<section data-background="img/maslow/2-scalability.png"><h2 style="float: right; padding-right: 50px">II.
 				Scalability</h2></section>
-			<section><h2>Tree shaking</h2> //TODO ADD gif</section>
+			<section><h2>Tree shaking</h2></section>
+			<section data-background="img/soup.jpg"></section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
 				Tree shaking
 				<pre><code data-trim data-noescape class="Dart">
@@ -319,7 +328,7 @@ console.log("Hello World");
 //...
 					</code></pre>
 			</section>
-			<section><h2>Deferred loading</h2> //TODO ADD gif</section>
+			<section><h2>Deferred loading</h2></section>
 			<section data-background="#191919" data-fullscreen class="about-dart">
 				<h3>Deferred loading</h3>
 				<pre><code data-trim data-noescape class="Dart" style="font-size: 2.2em; line-height: 1.2em;">
@@ -336,29 +345,62 @@ Future greet() async {
 			<section data-background="img/maslow/3-support.png"><h2 style="float: right; padding-right: 50px">III.
 				Support</h2></section>
 			<section>
-				<ul>
-					<li>Dart lang itself</li>
-					<li>Angular</li>
-					<li>Third-party Libraries</li>
-				</ul>
-			</section>
-		</section>
-		<section>
-			<section data-background="img/maslow/4-other.png"><h2 style="float: right; padding-right: 50px">IV. Other</h2>
-			</section>
-			<section><h3>Hiring</h3></section>
-		</section>
-		<section>i don't want to sell you dart</section>
-		<section>
-			<div><h1>Where</h1></div>
-			<div><h1>Why</h1></div>
-			<div><h1>What</h1></div>
-		</section>
-		<section>restaurant paradox</section>
+				Support
+				<div class="comparsion-table">
 
-		<section data-credits data-background="#FFFFFF">
+					<div class="header"><img src="img/dart_logo.png"></div>
+					<div class="header"><img src="img/package.png"></div>
+					<div class="header"><img src="img/angulardart_logo.png"></div>
+
+					<div class="fragment score">👍👍👍</div>
+					<div class="fragment score">🤔🤔</div>
+					<div class="fragment score">💩</div>
+				</div>
+			</section>
+		</section>
+		<section>
+			<section data-background="img/maslow/4-other.png"><h2 style="float: right; padding-right: 50px">IV.
+				Recruitment</h2>
+			</section>
+			<section><h2>Hiring</h2></section>
+			<section data-background="#191919" data-fullscreen class="about-dart">
+<pre><code data-trim data-noescape class="Dart" style="font-size: 1.7em; line-height: 1.4em; padding-left: 100px">
+class Cat {
+  String name;
+  int age;
+
+  Cat(this.name, this.age) {
+  }
+
+  int get humanYear => age*4;
+
+  void purr(Human me) {
+    if(me.isOwner){
+      print("Mrrrrrrrrr");
+    } else bite();
+  }
+}
+						</code></pre>
+			</section>
+		</section>
+		<section><h2>i don't want to sell you dart</h2></section>
+		<section>
+			<div class="www">
+				<div><h1><span class="capital">W</span>here</h1></div>
+				<div><h1><span class="capital">W</span>hy</h1></div>
+				<div><h1><span class="capital">W</span>hat</h1></div>
+			</div>
+		</section>
+		<section data-fullscreen>
+			<div class="restaurants"><img src="img/angular_restaurant.png" class="fragment"><img
+							src="img/react_restaurant.png"
+							style="padding: 0 100px" class="fragment"><img
+							src="img/vue_restaurant.png" class="fragment"></div>
+		</section>
+
+		<section data-credits>
 			<div id="info">
-				<h3>Thank you</h3>
+				<h1 style="margin-bottom: 100px">Thank you</h1>
 				<div class="social">
 					<div class="twitter">
 						<img src="img/social/twitter.png"><a href="https://twitter.com/bunopus">bunopus</a>
@@ -392,7 +434,7 @@ Future greet() async {
         progress: false,
         transition: 'fade',
         transitionSpeed: 'fast',
-        backgroundTransition: 'slide',
+        backgroundTransition: 'fade',
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},

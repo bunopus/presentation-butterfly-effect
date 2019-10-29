@@ -109,12 +109,10 @@ $red: #b82525;
           text-align: center;
         }
 
-        .fragment:not(.visible){
+        &.line-by-line > .fragment:not(.visible){
           opacity: 0.1;
         }
       }
-
-
     }
 
 
@@ -225,6 +223,53 @@ $red: #b82525;
             border-color: $third;
           }
         }
+      }
+    }
+
+    .comparsion-table {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      padding: 100px 0 100px 0;
+
+      .header{
+        height: 100px;
+        margin-bottom: 100px;
+      }
+
+      .score {
+        align-items: flex-start;
+        font-size: 1.4em;
+      }
+
+      .winner {
+        color: #dd8105;
+        font-size: 1.4em;
+      }
+
+      .loser {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .opaque {
+        opacity: 0.3;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .www {
+      .capital {
+        color: #de776b;
+      }
+    }
+
+    .restaurants {
+      img {
+        height: 500px;
       }
     }
   }
