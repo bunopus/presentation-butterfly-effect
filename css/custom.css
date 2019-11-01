@@ -180,6 +180,11 @@
     color: #de776b; }
   .reveal section .restaurants img {
     height: 500px; }
+  .reveal section .instructions {
+    font-family: roboto_mono, monospace;
+    font-size: 20px; }
+    .reveal section .instructions .hint {
+      background-color: #6f3636; }
   .reveal div.slide-background.present[data-background-hash="img/atomic.jpgnullimg/atomic.jpgnullnullnullnullnullnullnull"] {
     opacity: 0;
     -webkit-animation: fadein 5s forwards;

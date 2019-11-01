@@ -272,6 +272,14 @@ $red: #b82525;
         height: 500px;
       }
     }
+
+    .instructions {
+      font-family: roboto_mono, monospace;
+      font-size: 20px;
+      .hint {
+        background-color: #6f3636;
+      }
+    }
   }
 
   div.slide-background.present[data-background-hash="img/atomic.jpgnullimg/atomic.jpgnullnullnullnullnullnullnull"] {
